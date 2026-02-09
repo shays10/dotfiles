@@ -16,6 +16,9 @@ success_symbol = '[➜](bold green)'
 [git_branch]
 format =  '[$symbol$branch(:$remote_branch)]($style)'
 
+[git_status]
+disabled = true
+
 [aws]
 format = '[$symbol(profile: "$profile" )(\(region: $region\) )]($style)'
 disabled = true
