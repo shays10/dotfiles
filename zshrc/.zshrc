@@ -125,6 +125,10 @@ source <(carapace _carapace)
 eval "$(starship init zsh)"
 eval "$(atuin init zsh)"
 
+# Puppeteer
+export PUPPETEER_SKIP_CHROMIUM_DOWNLOAD=true
+export PUPPETEER_EXECUTABLE_PATH=`which chromium`
+
 # Eza
 alias l="eza -l --icons --git -a"
 alias lt="eza --tree --level=2 --long --icons --git"
