@@ -1,1 +1,6 @@
 .DS_Store
+claude/.claude/backups/
+claude/.claude/cache/
+claude/.claude/debug/
+claude/.claude/todos/
+claude/.claude/usage-data/
