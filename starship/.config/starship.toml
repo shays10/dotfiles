@@ -19,6 +19,11 @@ format =  '[$symbol$branch(:$remote_branch)]($style)'
 [git_status]
 disabled = true
 
+# $all (used in right_format) otherwise injects a newline here,
+# pushing typed commands onto a fresh line below the prompt.
+[line_break]
+disabled = true
+
 [aws]
 format = '[$symbol(profile: "$profile" )(\(region: $region\) )]($style)'
 disabled = true
@@ -29,6 +34,9 @@ symbol = " "
 format = '[ ](bold cyan)'
 
 [docker_context]
+disabled = true
+
+[gcloud]
 disabled = true
 
 [palettes.catppuccin_mocha]
