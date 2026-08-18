@@ -133,3 +133,12 @@ export PUPPETEER_EXECUTABLE_PATH=`which chromium`
 alias l="eza -l --icons --git -a"
 alias lt="eza --tree --level=2 --long --icons --git"
 alias ltree="eza --tree --level=2  --icons --git"
+
+# bun completions
+[ -s "/Users/shays/.bun/_bun" ] && source "/Users/shays/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+source "$HOME/.bazelenv"
