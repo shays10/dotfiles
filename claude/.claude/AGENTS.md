@@ -67,3 +67,12 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 - When you defer an optional decision ("we could add X later"), restate it as an explicit Proposed item before ending the topic. Don't rely on the user to recall it.
 - When introducing framework or technical jargon (proto annotations, cache eviction policies, build macros, etc.), define it inline at first use. Don't wait for "what is X?".
 - "Out of scope" or "decided" items inherited from a prior phase (PRD, spec, earlier conversation) are starting hypotheses, not facts. At each later phase that depends on them, name the inherited decision and ask whether it still holds.
+
+## 7. Workflow Routing
+
+- Use the `how` skill for runtime flow, ownership, layering, and code walkthroughs.
+- Use the `why` skill for historical intent, prior decisions, historical regressions, and thresholds.
+- Use `blast-radius` when a small change may affect callers or behavior outside its diff.
+- Use `technical-writing` for documentation, RFCs, READMEs, pull request descriptions, and commit messages.
+- Apply `no-comments` as the first step of every code review. Preserve comments protected by repository instructions and report uncertain constraints instead of deleting them.
+- `shay-flow` and `reflect` are explicit workflows. Run them only when invoked.
