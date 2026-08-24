@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+repo_dir="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
+
+cd "$repo_dir"
+git pull --ff-only
+stow --restow --target="$HOME" agents claude ghostty starship zshrc
+
+mkdir -p "$HOME/.claude/skills"
+for skill_dir in "$repo_dir"/agents/.agents/skills/*; do
+  [[ -d "$skill_dir" ]] || continue
+  skill_name="${skill_dir##*/}"
+  claude_skill="$HOME/.claude/skills/$skill_name"
+
+  if [[ -e "$claude_skill" && ! -L "$claude_skill" ]]; then
+    printf 'Refusing to replace non-symlink: %s\n' "$claude_skill" >&2
+    exit 1
+  fi
+
+  ln -sfn "../../.agents/skills/$skill_name" "$claude_skill"
+done
+
+printf 'Dotfiles synced from %s\n' "$repo_dir"
