@@ -1,6 +1,6 @@
 ---
 name: no-comments
-description: Review comments when the user invokes no-comments or shay-flow reaches review/readiness. Remove narration and stale workarounds while preserving repository-required rationale; review-only requests remain read-only.
+description: Review comments as the first step of every code review, and when the user invokes no-comments. Remove narration and stale workarounds while preserving repository-required rationale; review-only requests remain read-only.
 ---
 
 # No comments

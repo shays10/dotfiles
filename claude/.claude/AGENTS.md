@@ -74,5 +74,5 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 - Use the `why` skill for historical intent, prior decisions, historical regressions, and thresholds.
 - Use `blast-radius` when a small change may affect callers or behavior outside its diff.
 - Use `technical-writing` for documentation, RFCs, READMEs, pull request descriptions, and commit messages.
-- Apply `no-comments` when directly invoked or when `shay-flow` reaches review/readiness. Preserve comments protected by repository instructions and report uncertain constraints instead of deleting them.
+- Apply `no-comments` as the first step of every code review. Preserve comments protected by repository instructions and report uncertain constraints instead of deleting them.
 - `shay-flow` and `reflect` are explicit workflows. Run them only when invoked.
