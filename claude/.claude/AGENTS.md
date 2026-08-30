@@ -54,11 +54,15 @@ For multi-step tasks, state a brief plan:
 
 Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
 
-## 5. Bazel hygiene
+## 5. Coding Guidelines
+
+For implementation or code review, read and apply `~/.agents/CODING_GUIDELINES.md`.
+
+## 6. Bazel hygiene
 
 **Never run `bazel clean` or `bazel clean --expunge`.** These flush the entire local cache and can cost 30+ minutes of rebuild time. They're almost never the right fix — stale-cache symptoms in Bazel are rare, and a real cache issue should be diagnosed by inspecting the specific failure, not by nuking the cache. If you're tempted, surface the underlying problem to the user instead.
 
-## 6. Design & Interview Discipline
+## 7. Design & Interview Discipline
 
 **When interactively designing or grilling with a user.**
 
@@ -68,7 +72,7 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 - When introducing framework or technical jargon (proto annotations, cache eviction policies, build macros, etc.), define it inline at first use. Don't wait for "what is X?".
 - "Out of scope" or "decided" items inherited from a prior phase (PRD, spec, earlier conversation) are starting hypotheses, not facts. At each later phase that depends on them, name the inherited decision and ask whether it still holds.
 
-## 7. Workflow Routing
+## 8. Workflow Routing
 
 - Use the `how` skill for runtime flow, ownership, layering, and code walkthroughs.
 - Use the `why` skill for historical intent, prior decisions, historical regressions, and thresholds.
