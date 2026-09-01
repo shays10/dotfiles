@@ -30,8 +30,11 @@ Finish when the original reproduction is green for the intended reason and no ob
 3. Use `domain-modeling` when terminology or state is unclear. Use `prototype` only when an observable experiment can settle a real design fork.
 4. Implement the complete change. Avoid compatibility layers that exist only to smooth an internal migration.
 5. Run focused tests, required linting, and a check against the real artifact when available.
+6. Run `thermo-nuclear-code-quality-review` against the complete feature/refactor diff instead of `code-review`.
+7. Make exactly one automatic-fix pass over its findings. Apply only high-confidence fixes whose remedy stays within the requested feature/refactor or its directly affected callers, preserves requested behavior and public contracts, and has focused verification. Skip and report findings that would add requirements, change unrelated code, require a broad redesign, or depend on a product decision.
+8. Rerun the checks affected by that fix pass.
 
-Finish when the requested behavior is observable.
+Finish when the requested behavior is observable, reasonable in-scope review findings have been fixed, and verification is green.
 
 ## Review and readiness
 
