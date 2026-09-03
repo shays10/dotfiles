@@ -77,6 +77,7 @@ For implementation or code review, read and apply `~/.agents/CODING_GUIDELINES.m
 - Use the `how` skill for runtime flow, ownership, layering, and code walkthroughs.
 - Use the `why` skill for historical intent, prior decisions, historical regressions, and thresholds.
 - Use `blast-radius` when a small change may affect callers or behavior outside its diff.
-- Use `technical-writing` for documentation, RFCs, READMEs, pull request descriptions, and commit messages.
+- Use `pr-description` when creating or updating a pull request body.
+- Use `technical-writing` for documentation, RFCs, READMEs, and commit messages.
 - Apply `no-comments` as the first step of every code review. Preserve comments protected by repository instructions and report uncertain constraints instead of deleting them.
 - `shay-flow` and `reflect` are explicit workflows. Run them only when invoked.
