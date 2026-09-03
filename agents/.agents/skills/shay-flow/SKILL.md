@@ -46,4 +46,4 @@ Finish when the requested behavior is observable, reasonable in-scope review fin
 
 Green checks are evidence, not the verdict. Finish with a clear ready or not-ready judgment and the facts supporting it.
 
-Apply `technical-writing` to documentation, RFCs, pull request descriptions, and commit messages produced by any flow.
+Apply `pr-description` to pull request bodies. Apply `technical-writing` to documentation, RFCs, and commit messages produced by any flow.
