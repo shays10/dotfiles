@@ -4,6 +4,8 @@ In Scala, represent effect-only asynchronous results as `Future[Empty]` when the
 
 When SDL supports a bulk operation for the work, use it instead of `Future.traverse` over individual operations. Do not launch hundreds or thousands of SDL futures concurrently when the same work can be expressed as a bounded bulk query, patch, insert, or delete.
 
+Never add an SDL index without the user's explicit permission. If an access pattern may need an index, explain the performance tradeoff and ask before changing the entity's index configuration.
+
 When a method is long because it performs several distinct parts of a flow, extract each part into a well-named method and leave the original method as a short, high-level sequence. Each name should describe what that part accomplishes in the domain, allowing a reader to understand the complete flow without first reading its implementation details.
 
 A boolean name must state exactly what its predicate proves. Check the name against every branch that makes the predicate true, and reject names that imply a stronger lifecycle state or an outcome that has not happened. When a later phase depends on an earlier phase’s result, derive the boolean from the post-phase domain state and name that state; do not infer success from pre-phase candidates.
