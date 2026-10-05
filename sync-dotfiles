@@ -6,6 +6,9 @@ repo_dir="$(CDPATH= cd -- "$(dirname -- "$0")" && pwd)"
 
 cd "$repo_dir"
 git pull --ff-only
+# Without this, stow on a fresh HOME folds ~/.agents into a symlink to this
+# repo, and aicm below would write the Wix-internal skill into it.
+mkdir -p "$HOME/.agents/skills"
 stow --restow --target="$HOME" agents claude ghostty starship zshrc
 
 # aicm replaces ~/.claude/skills with a symlink to ~/.agents/skills, where stow
