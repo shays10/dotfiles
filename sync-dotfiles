@@ -22,4 +22,11 @@ for skill_dir in "$repo_dir"/agents/.agents/skills/*; do
   ln -sfn "../../.agents/skills/$skill_name" "$claude_skill"
 done
 
+# Wix-internal, so installed from the aicm registry rather than tracked in this
+# public repo. -g keeps aicm.json and aicm.lock in ~/.agents instead of the
+# current directory.
+if [[ ! -e "$HOME/.agents/skills/serverless" ]]; then
+  npx --yes @wix/aicm skills add serverless -g
+fi
+
 printf 'Dotfiles synced from %s\n' "$repo_dir"
